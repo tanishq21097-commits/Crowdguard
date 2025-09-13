@@ -1,0 +1,286 @@
+/* --- General Setup & Variables --- */
+:root {
+    --primary-blue: #007BFF;
+    --accent-green: #28a745;
+    --dark-grey: #343a40;
+    --light-grey: #f8f9fa;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-grey);
+}
+
+/* --- Navigation Bar --- */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-grey);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-blue);
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?technology,abstract') no-repeat center center/cover;
+    padding: 0 5%;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.cta-button {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* --- General Content Section Styling --- */
+.content-section {
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+.content-section:nth-child(even) {
+    background-color: var(--light-grey);
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+}
+
+/* --- Problem Section --- */
+.columns {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.column {
+    flex: 1;
+    max-width: 350px;
+}
+
+.column i {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Solution Section --- */
+.placeholder-image {
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    background: #e0e0e0;
+    margin: 2rem auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* --- How It Works Section --- */
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.step {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    max-width: 250px;
+    position: relative;
+}
+
+.step span {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    background: var(--primary-blue);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.step h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Features Section --- */
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: var(--accent-green);
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Demo Section --- */
+.video-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.placeholder-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--dark-grey);
+    color: var(--light-grey);
+    text-align: center;
+    padding: 2rem 5%;
+}
+
+/* --- Scroll Animation --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Simple hiding for prototype, can be replaced with hamburger menu */
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .columns, .steps {
+        flex-direction: column;
+        align-items: center;
+    }
+}
